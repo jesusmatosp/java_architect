@@ -1,0 +1,18 @@
+EVALUACION
+----------
+Crear
+  a. Un Productor que enviará 10 mensajes tipo ObjectMessage.
+  b. El objeto Voto tendrá atributos: respuesta, con posibles valores:{SI,NO}
+  c. El Consumidor debe obtener todos los mensajes y como respuesta mostrará el
+     total de votos para el SI y el NO. P.e: SI=23, NO=10
+  d. Los valores del voto es aleatorio:
+     String voto = Math.random() > 0.5 ? "SI" : "NO";
+
+Se evaluará lo siguiente:
+  1. El productor funcionando
+  2. El consumidor funcionando.
+
+NOTAS:
+- Hay que crear otro Queue Factory de nombre QueueVotoCF
+- Las colas: QueueVoto
+  
