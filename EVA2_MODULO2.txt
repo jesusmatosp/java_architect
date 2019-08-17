@@ -1,0 +1,29 @@
+EVAM202_Prest-ValMonto Suscriptor Asincrono
+EVAM202_Prest-ValSbs   Suscriptor Asincrono
+EVAM202_Prest-Client  Publish Sincrono a prestOut
+
+
+TOPIC:
+PrestIn (IN)
+
+QUEUE:
+prestOut (OUT)
+
+Pasos
+  a. El objeto Cliente={nombre:String,
+						monto:Double,
+						sueldo:Double,
+						dni:String}
+     es enviado por Prest-cliente a la prestIn
+  b. Prest-ValMonto valida que el monto solicitado de prestamo no sobrepase
+     4*sueldo.
+	 
+  c. Prest-ValSbs valida que no este en riesgo. Lo identifica por su DNI
+	 APlicar si DNI es impar es Valido
+	 
+  d. Prest-client recoge las respuestas en texto={OK,NOK}
+  
+  e. Segun la respuesta debe resgistrar como salida la respuesta general
+     con el detalle, por ejemplo: NOK[sbs=NOK,monto=OK]
+	 
+	 
