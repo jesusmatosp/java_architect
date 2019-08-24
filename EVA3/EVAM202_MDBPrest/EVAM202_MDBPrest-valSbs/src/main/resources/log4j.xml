@@ -19,7 +19,7 @@
 
     <appender name="DAYFILE" class="org.apache.log4j.DailyRollingFileAppender">
         <!-- param name="File" value="${jboss.server.log.dir}/jaad.log" /-->
-        <param name="File" value="${com.sun.aas.instanceRoot}/logs/jaad.log" />
+        <param name="File" value="${com.sun.aas.instanceRoot}/logs/jaad-SBS.log" />
         <param name="DatePattern" value="'.'yyyyMMdd" />
         <param name="Append" value="true" />
         <layout class="org.apache.log4j.PatternLayout">
