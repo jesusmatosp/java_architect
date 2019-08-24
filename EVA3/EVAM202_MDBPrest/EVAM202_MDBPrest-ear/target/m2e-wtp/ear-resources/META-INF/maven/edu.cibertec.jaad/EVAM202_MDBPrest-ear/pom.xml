@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>edu.cibertec.jaad</groupId>
+	<artifactId>EVAM202_MDBPrest-ear</artifactId>
+	<packaging>ear</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>EVAM202_MDBPrest-ear</name>
+
+	<build>
+		<plugins>
+			<!--Ear plugin -creating the ear - watch out skinny WARS! -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<generateApplicationXml>true</generateApplicationXml>
+					<displayName>LABM203-MDB</displayName>
+					<defaultJavaBundleDir>lib/</defaultJavaBundleDir>
+					<skinnyWars>true</skinnyWars>
+					<modules>
+						<ejbModule>
+							<groupId>edu.cibertec.jaad</groupId>
+							<artifactId>EVAM202_MDBPrest-valMonto</artifactId>
+						</ejbModule>
+						<ejbModule>
+							<groupId>edu.cibertec.jaad</groupId>
+							<artifactId>EVAM202_MDBPrest-valSbs</artifactId>
+						</ejbModule>
+					</modules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>edu.cibertec.jaad</groupId>
+			<artifactId>EVAM202_MDBPrest-valSbs</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>ejb</type>
+		</dependency>
+		<dependency>
+			<groupId>edu.cibertec.jaad</groupId>
+			<artifactId>EVAM202_MDBPrest-valMonto</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>ejb</type>
+		</dependency>
+	</dependencies>
+</project>

@@ -1,0 +1,1 @@
+10:46:10,414 [main      ] INFO  (mdb.MDBClient:35) Mensaje enviado=[Orden [idOrden=1, descripcion=Parihuela, fechaRegistro=Sat Aug 24 10:46:10 COT 2019, subtotal=40.0, descuentos=5.0, total=35.0, estado=RECIBIDO, idCliente=001]]

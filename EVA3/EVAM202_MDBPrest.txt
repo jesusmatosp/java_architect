@@ -1,0 +1,28 @@
+EVALUACION
+----------
+Proyectos:
+EVAM202_Prest-client
+EVAM202_Prest-ValMonto
+EVAM202_Prest-ValSbs
+
+Colas:
+PrestQueue
+Pasos
+  a. El objeto Cliente={nombre:String,monto:Double,sueldo:Double,dni:String}
+     es enviado por Prest-cliente a la cola.
+  b. Prest-ValMonto valida que el monto solicitado de prestamo no sobrepase
+     4*sueldo.
+  c. Prest-ValSbs valida que no este en riesgo. Lo identifica por su DNI
+  d. Prest-client recoge las respuestas en texto={OK,NOK}
+  e. Segun la respuesta debe resgistrar como salida la respuesta general
+     con el detalle, por ejemplo: NOK=sbs=NOK,monto=OK
+
+Se evaluará lo siguiente:
+  1. Prest-Client funcionando
+  2. Prest-ValMonto funcionando
+  3. Prest-ValSbs funcionando
+
+NOTAS:
+- Hay que crear otro Queue Factory de nombre PrestQueueCF
+- Las colas: PrestQueue
+  
